@@ -20,3 +20,6 @@ logging.basicConfig(
     format =  "[ %(asctime)s ] %(lineno)d %(name)s - %(levelname)s - %(message)s", # insige the file
     level = logging.INFO, # level in CAPS
 )
+
+if __name__ == "__main__":
+    logging.info("Logging has started") # %(message)s

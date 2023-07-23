@@ -1,5 +1,5 @@
 import sys # will contain everything about the runtime hence all the exeptions occured as well
-import logging
+from src.logger import logging
 
 def error_message_detail(error, error_detail:sys): # error_detail is provided by the sys module, contains info about line no. filename etc.
     # exc_tb will contain all the info of the exception occured(file, line etc)
@@ -25,5 +25,5 @@ if __name__ == "__main__":
     try: 
         a = 1/0
     except Exception as e: # error message given by Exception Class stored as e
-        logging.info("Divide by 0")
+        logging.info("Divide by 0") # message in the given format of the file to be created.
         raise CustomException(e, sys) 
