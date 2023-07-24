@@ -9,6 +9,8 @@ from dataclasses import dataclass
 
 from src.components.data_transformation import DataTransformatiom
 from src.components.data_transformation import DataTransformConfig
+from src.components.model_trainer import ModelTrainerConfig
+from src.components.model_trainer import ModelTrainer
 
 # decorators wrap a function, modifying its behavior.
 # let the function be 'f', pass a reference to another function
@@ -84,4 +86,7 @@ if __name__ == "__main__":
     train_data, test_data = obj.initiate_data_ingestion()
 
     data_transformation = DataTransformatiom()
-    data_transformation.initiate_data_transformation(train_data, test_data)
+    train_arr, test_arr, _ = data_transformation.initiate_data_transformation(train_data, test_data)
+
+    modelTrainer = ModelTrainer()
+    print(modelTrainer.initiate_model_trainer(train_arr, test_arr))

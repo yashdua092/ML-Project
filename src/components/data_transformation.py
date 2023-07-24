@@ -37,7 +37,7 @@ class DataTransformatiom:
 
             num_pipeline = Pipeline( # pipeline for numerical features transformation
                 steps = [
-                    ("imputer", SimpleImputer(strategy="median")),
+                    ("imputer", SimpleImputer(strategy="median")), # handling missing values
                     ("scaler", StandardScaler(with_mean=False))
                 ]
             )
