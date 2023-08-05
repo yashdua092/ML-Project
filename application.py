@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 
 from src.pipeline.predict_pipeline import CustomData, predictPipeline
 
-application = Flask(__name__) # gives the entry point
+application = Flask(__name__, static_folder="./templates/static") # gives the entry point
 app = application
 
 # route to home page
