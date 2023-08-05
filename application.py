@@ -10,11 +10,11 @@ application = Flask(__name__, static_folder="./templates/static") # gives the en
 app = application
 
 # route to home page
-@app.route('/')
-def index():
-    return render_template('index.html')
+# @app.route('/')
+# def index():
+#     return render_template('index.html')
 
-@app.route('/predictData', methods = ['GET', 'POST'])
+@app.route('/', methods = ['GET', 'POST'])
 def predict_datapoint():
     if request.method == 'GET':
         return render_template('home.html')
